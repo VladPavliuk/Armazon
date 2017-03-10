@@ -36,9 +36,6 @@ body {
     left: calc(50% - 175px);
 }
 
-.main-menu {
-    font-size: 20px;
-}
 @-webkit-keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
