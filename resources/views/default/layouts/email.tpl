@@ -23,12 +23,12 @@
         від {$currentData} року
     </h3>
 
-    <table align="left" border="1" style="width: 90%; border-collapse: collapse; font-size: 18px; padding: 3px; text-align: center;">
+    <table border="1" style="width: 90%; border-collapse: collapse; font-size: 18px; padding: 3px; text-align: left;">
         <tr style=" height: 40px;">
             <th>№</th>
             <th>Повна назва товару</th>
-            <th>Кількість</th>
             <th>Ціна за 1 шт.</th>
+            <th>Кількість</th>
             <th>Сума</th>
         </tr>
 
@@ -43,19 +43,19 @@
                             <td>
                                 Фоторамка {$profile['profile']|upper}
                                 {if $size['size'] eq "21x30F"}
-                                    21x30ніжка
+                                    21x30 (ніжка)
                                     {else}
                                     {$size['size']}
                                 {/if}
                                 колір "{$color['ukr_title']}"
                             </td>
                             <td>
-                                {$cart[$profile['profile']][$size['size']][$color['color']]}
-                                шт.
-                            </td>
-                            <td>
                                 {$size["{$profile['profile']}_prices"]}
                                 грн.
+                            </td>
+                            <td>
+                                {$cart[$profile['profile']][$size['size']][$color['color']]}
+                                шт.
                             </td>
                             <td>
                                 {$size["{$profile['profile']}_prices"] *
@@ -68,12 +68,12 @@
             {/foreach}
         {/foreach}
         <tr>
-            <td colspan="3"><span style="background-color: #dddddd">Разом без знижки</span></td>
+            <td style="text-align: center;" colspan="3"><span style="background-color: #e6e6e6">Разом без знижки</span></td>
             <td>{$count} шт.</td>
             <td>{$totalPriceWithoutDiscount} грн.</td>
         </tr>
         <tr>
-            <td colspan="3"><span style="background-color: #dddddd">Знижка</span></td>
+            <td style="text-align: center;" colspan="3"><span style="background-color: #e6e6e6">Знижка</span></td>
             {if $secondDiscount == 1}
                 <td>{$secondDiscountValue}%</td>
             {else}
@@ -82,15 +82,16 @@
             <td>{$totalPriceWithoutDiscount - $price} грн.</td>
         </tr>
         <tr>
-            <td colspan="4"><span style="background-color: #dddddd">До оплати</span></td>
+            <td style="text-align: center;" colspan="4"><span style="background-color: #e6e6e6">До оплати</span></td>
             <td>{$price} грн.</td>
         </tr>
     </table>
+    <br>
     <div>
 
         <h3>
             {if $secondDiscount == 1}
-                Сума замовлення без знижки:
+                Сума замовлення:
                 <span>{$price} гривень (15% знижка)</span>
             {else}
                 Сума замовлення:
