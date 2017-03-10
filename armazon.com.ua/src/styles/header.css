@@ -1,0 +1,50 @@
+/**
+*   LIST OF COLORS
+*
+*   body background-color: #fdfdfd
+*   footer-color: #f3f3f3
+*
+*   border-color: #7f7f7f
+*   light-border-color: #a5a5a5;
+*   blue: #65b6f6
+*   darker-blue: #359ff3
+*   green: #5cb860
+*
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+
+    -webkit-animation: fadeEffect .5s;
+    animation: fadeEffect .5s;
+}
+
+body {
+    background-color: #fdfdfd;
+}
+
+.header-image {
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 175px);
+}
+
+.main-menu {
+    font-size: 20px;
+}
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

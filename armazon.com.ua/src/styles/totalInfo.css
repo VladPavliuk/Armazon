@@ -1,0 +1,24 @@
+.total-info {
+    -webkit-animation: fadeEffect .3s;
+    animation: fadeEffect .3s;
+}
+
+.to-cart-button {
+    color: #fff !important;
+    margin-top: 5px;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.to-cart-button:hover {
+    color: #7f7f7f !important;
+}
+
+.total-info {
+    padding-top: 20px !important;
+}

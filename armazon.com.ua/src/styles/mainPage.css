@@ -1,0 +1,35 @@
+/**
+*   LIST OF COLORS
+*
+*   body background-color: #fdfdfd
+*   footer-color: #f3f3f3
+*
+*   border-color: #7f7f7f
+*   light-border-color: #a5a5a5;
+*   blue: #65b6f6
+*   darker-blue: #359ff3
+*   green: #5cb860
+*
+*/
+
+#profiles-list {
+    margin-bottom: 15px;
+}
+
+#profiles-list div {
+    margin-bottom: 10px;
+}
+
+#profiles-list a div div:nth-child(2){
+    margin-left: 30px;
+}
+
+#profiles-list a div div:nth-child(2) h4{
+    margin-bottom: 40px;
+}
+
+.profile-page-image {
+    height: 150px;
+}
+
+

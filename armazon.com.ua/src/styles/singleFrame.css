@@ -1,0 +1,49 @@
+.frame-unit {
+    margin: 10px;
+    margin-bottom: 100px;
+    display: inline-block;
+
+    -webkit-animation: fadeEffect .1s;
+    animation: fadeEffect .1s;
+}
+
+.frame-unit hr {
+    margin: 14px 0;
+}
+
+.single-frame-image {
+    cursor: pointer;
+    height: 220px;
+}
+
+.count {
+    line-height: 40px;
+    padding-left: 8px !important;
+    font-size: 22px !important;
+    width: 80px;
+    border: 1px solid #a5a5a5 !important;
+    border-radius: 3px !important;
+
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.remove {
+    position: relative;
+    font-size: 2.3em;
+    top: 0px;
+    left: 5px;
+
+    -webkit-animation: fadeEffect .3s;
+    animation: fadeEffect .3s;
+}
+
+.shop-remove {
+    position: relative;
+    top: 15px;
+}
+
+

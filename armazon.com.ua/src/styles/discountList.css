@@ -1,0 +1,15 @@
+.discount-list {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 0px;
+}
+
+.discount-list button {
+    border-radius: 0px;
+}
+
+.discount-list #collapseDiscountList ul li ul {
+    padding-left: 10px;
+    list-style-type: none;
+}
