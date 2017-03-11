@@ -31,12 +31,12 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <p class="navbar-text">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <i class="fa fa-phone fa-lg" aria-hidden="true"></i>
                         <b>(067)-450-80-80</b>
                     </p>
 
                     <p class="navbar-text">
-                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>
                         <b>sale@armazon.com.ua</b>
                     </p>
                     <li>
