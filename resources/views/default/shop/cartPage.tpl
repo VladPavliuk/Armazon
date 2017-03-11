@@ -1,12 +1,12 @@
 {if $count > 0}
     <div id="shopping-cart" class="shopping-cart">
 
-        <div class="col-lg-7 col-lg-offset-2">
+        <div class="col-lg-10 col-lg-offset-1">
             <div class="row">
                 <div class="page-header">
                     <h2>Ваш кошик</h2>
                 </div>
-                <table align="left" class="table table-striped table-hover table-responsive">
+                <table align="left" class="cart-table table table-striped table-hover table-responsive">
                     <thead>
                     <tr>
                         <th></th>
@@ -75,7 +75,7 @@
                 <a href="/#profiles-list" class="btn btn-primary">Додати ще рамок!</a>
             </div>
             <br>
-
+            <br>
             <!-- Discount list -->
             {if $firstDiscount == 1}
                 {assign var=firstDiscountActive value='block'}
