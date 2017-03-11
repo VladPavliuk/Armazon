@@ -29,7 +29,7 @@ class Cart
             return true;
         } else {
             $_SESSION['cart'][$profile][$size][$color] = NULL;
-            return true;
+            return false;
         }
     }
 

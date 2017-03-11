@@ -26,7 +26,7 @@
                             {foreach from=$colors item=color}
 
                                 {if {$cart[$profile['profile']][$size['size']][$color['color']]} > 0}
-                                    <tr>
+                                    <tr id="{$profile['profile']}_{$size['size']}_{$color['color']}">
                                         <td></td>
                                         <td>{$profile['upper_ukr_title']}</td>
                                         <td>
@@ -41,7 +41,7 @@
                                             {$size["{$profile['profile']}_prices"]}
                                             грн.
                                         </td>
-                                        <td>
+                                        <td class="single-frame-total-sum">
                                             {$size["{$profile['profile']}_prices"] *
                                             $cart[$profile['profile']][$size['size']][$color['color']]}
                                             грн.
@@ -92,12 +92,17 @@
                 <ul class="list-group">
                     <li style="display: {$firstDiscountActive}"
                         class="first-discount list-group-item list-group-item-success">
-                        Безкоштовна доставка.
+                        <p class="lead">
+                            Безкоштовна доставка.
+                        </p>
                     </li>
 
                     <li style="display: {$secondDiscountActive}"
                         class="second-discount list-group-item list-group-item-success">
-                        Знижка 15%.
+                        <p class="lead">
+
+                            Знижка 15%.
+                        </p>
                     </li>
                 </ul>
             </div>

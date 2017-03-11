@@ -1,22 +1,4 @@
 /**
- * Change frame color table.
- *
- * @param profile
- * @param color
- */
-function changeColor(profile, color) {
-
-    if (color === 'dark') {
-
-        $('.' + profile + '-dark-table').css('display', 'block');
-        $('.' + profile + '-light-table').css('display', 'none');
-    } else {
-        $('.' + profile + '-light-table').css('display', 'block');
-        $('.' + profile + '-dark-table').css('display', 'none');
-    }
-}
-
-/**
  * Start when set value in input.
  *
  * @param profile
@@ -55,47 +37,71 @@ function addToCart(profile, size, color, count) {
 
     if (liveInputValid(inputId, count)) {
 
-        var params = profile + '/' + size + '/' + color;
-        var urlRequst = "cart-add/" + params + "/" + count;
+        updateSingleFramePriceSum(profile, size, color, count);
+        updateTotalInfo(profile, size, color, count);
+    }
+}
 
-        $.get(urlRequst, function (response) {
+function updateTotalInfo(profile, size, color, count) {
 
-            var dataArray = JSON.parse(response);
+    var params = profile + '/' + size + '/' + color;
+    var urlRequst = "cart-add/" + params + "/" + count;
 
-            var totalCount = dataArray.totalCount;
-            var totalPrice = dataArray.totalPrice;
-            var firstDiscount = dataArray.firstDiscount;
-            var secondDiscount = dataArray.secondDiscount;
+    $.get(urlRequst, function (response) {
 
-            if (firstDiscount === true) {
-                $(".first-discount").css("display", "block");
-            } else {
-                $(".first-discount").css("display", "none");
-            }
+        var dataArray = JSON.parse(response);
 
-            if (secondDiscount === true) {
-                $(".second-discount").css("display", "block");
-            } else {
-                $(".second-discount").css("display", "none");
-            }
+        var totalCount = dataArray.totalCount;
+        var totalPrice = dataArray.totalPrice;
+        var firstDiscount = dataArray.firstDiscount;
+        var secondDiscount = dataArray.secondDiscount;
 
-            if (totalCount <= 0) {
+        if (firstDiscount === true) {
+            $(".first-discount").css("display", "block");
+        } else {
+            $(".first-discount").css("display", "none");
+        }
 
-                var text = '<div style="margin-bottom: 400px;">' +
-                    '<div class="page-header">' +
-                    '<h2 >Ваша корзина порожня.</h2>' +
-                    '</div>' +
-                    '<p class="lead"><a href="/#profiles-list">Заповнити?</a></p>' +
-                    '</div>';
+        if (secondDiscount === true) {
+            $(".second-discount").css("display", "block");
+        } else {
+            $(".second-discount").css("display", "none");
+        }
 
-                $('.shopping-cart').html(text);
-            }
+        emptyCartHtmlRender(totalCount);
 
-            updateTotalCount(totalCount);
-            updateTotalPrice(totalPrice);
+        updateTotalCount(totalCount);
+        updateTotalPrice(totalPrice);
 
-            return true;
-        });
+        return true;
+    });
+}
+
+function updateSingleFramePriceSum(profile, size, color, count) {
+    var params = profile + '/' + size + '/';
+    var urlRequst = "frame-get-price/" + params;
+
+    $.get(urlRequst, function (response) {
+        var singleFramePrice = JSON.parse(response);
+
+        var rowId = "#" + profile + "_" + size + "_" + color;
+        var singleFramePriceSum = +count * +singleFramePrice;
+
+        $(rowId + " .single-frame-total-sum").text(singleFramePriceSum + " грн.");
+    });
+}
+
+function emptyCartHtmlRender(totalCount) {
+    if (totalCount <= 0) {
+
+        var text = '<div style="margin-bottom: 400px;">' +
+            '<div class="page-header">' +
+            '<h2 >Ваша корзина порожня.</h2>' +
+            '</div>' +
+            '<p class="lead"><a href="/#profiles-list">Заповнити?</a></p>' +
+            '</div>';
+
+        $('.shopping-cart').html(text);
     }
 }
 

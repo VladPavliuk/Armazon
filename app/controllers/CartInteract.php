@@ -138,7 +138,7 @@ trait CartInteract
     {
         $framePrice = Cart::getFramePrice($profile, $size);
 
-        //echo json_encode($framePrice);
-        return $framePrice;
+        echo json_encode($framePrice);
+        //return $framePrice;
     }
 }
