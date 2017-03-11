@@ -9,7 +9,7 @@
         </h3>
 
         <p>
-            ФОП Павлюк Василь В'ячиславович
+            ФОП Павлюк Василь В'ячеславович
         </p>
 
         <p>
@@ -68,12 +68,14 @@
             {/foreach}
         {/foreach}
         <tr>
-            <td style="text-align: center;" colspan="3"><span style="background-color: #e6e6e6">Разом без знижки</span></td>
+            <td>#</td>
+            <td colspan="2"><span style="background-color: #e6e6e6">Разом без знижки</span></td>
             <td>{$count} шт.</td>
             <td>{$totalPriceWithoutDiscount} грн.</td>
         </tr>
         <tr>
-            <td style="text-align: center;" colspan="3"><span style="background-color: #e6e6e6">Знижка</span></td>
+            <td>#</td>
+            <td colspan="2"><span style="background-color: #e6e6e6">Знижка</span></td>
             {if $secondDiscount == 1}
                 <td>{$secondDiscountValue}%</td>
             {else}
@@ -82,7 +84,8 @@
             <td>{$totalPriceWithoutDiscount - $price} грн.</td>
         </tr>
         <tr>
-            <td style="text-align: center;" colspan="4"><span style="background-color: #e6e6e6">До оплати</span></td>
+            <td>#</td>
+            <td colspan="3"><span style="background-color: #e6e6e6">До оплати</span></td>
             <td>{$price} грн.</td>
         </tr>
     </table>
