@@ -24,9 +24,9 @@
             <div class="collapse" id="collapseDiscountList">
                 <ul class="list-group clearfix">
                     <li class="first-discount list-group-item {$firstDiscountActive}">
-                        <small>
+                        <span>
                             При замовленні від
-                        </small>
+                        </span>
                         <span class="text-success">
                             {$firstDiscountTitle} грн.
                         </span>
@@ -37,9 +37,9 @@
                         </ul>
                     </li>
                     <li class="second-discount list-group-item {$secondDiscountActive}">
-                        <small>
+                        <span>
                             При замовленні від
-                        </small>
+                        </span>
                         <span class="text-success">
                             {$secondDiscountTitle} грн.
                         </span>

@@ -13,10 +13,10 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="/#profiles-list">Головна</a></li>
+                    <li><a href="/#profiles-list"><b>Головна</b></a></li>
                     <li class="dropdown">
                         <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Фоторамки
+                            <b>Фоторамки</b>
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
@@ -24,7 +24,7 @@
                             <li><a href="/frodo#profile-content">Серія FRODO</a></li>
                         </ul>
                     </li>
-                    <li><a href="/about#about-page">Про нас</a></li>
+                    <li><a href="/about#about-page"><b>Про нас</b></a></li>
 
                 </ul>
 
@@ -32,12 +32,12 @@
 
                     <p class="navbar-text">
                         <i class="fa fa-phone" aria-hidden="true"></i>
-                        <small>(067)-450-80-80</small>
+                        <b>(067)-450-80-80</b>
                     </p>
 
                     <p class="navbar-text">
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        <small>sale@armazon.com.ua</small>
+                        <b>sale@armazon.com.ua</b>
                     </p>
                     <li>
                         <a href="https://www.facebook.com/armazonframes/" target="_blank">

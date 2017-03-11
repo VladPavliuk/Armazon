@@ -67,15 +67,13 @@
                 {/foreach}
             {/foreach}
         {/foreach}
-        <tr>
-            <td>#</td>
-            <td colspan="2"><span style="background-color: #e6e6e6">Разом без знижки</span></td>
+        <tr style="background-color: #e6e6e6">
+            <td colspan="3"><span style="padding-left: 15px;">Разом без знижки</span></td>
             <td>{$count} шт.</td>
             <td>{$totalPriceWithoutDiscount} грн.</td>
         </tr>
-        <tr>
-            <td>#</td>
-            <td colspan="2"><span style="background-color: #e6e6e6">Знижка</span></td>
+        <tr  style="background-color: #e6e6e6">
+            <td colspan="3"><span style="padding-left: 15px;">Знижка</span></td>
             {if $secondDiscount == 1}
                 <td>{$secondDiscountValue}%</td>
             {else}
@@ -83,9 +81,8 @@
             {/if}
             <td>{$totalPriceWithoutDiscount - $price} грн.</td>
         </tr>
-        <tr>
-            <td>#</td>
-            <td colspan="3"><span style="background-color: #e6e6e6">До оплати</span></td>
+        <tr style="background-color: #e6e6e6">
+            <td colspan="4"><span style="padding-left: 15px;">До оплати</span></td>
             <td>{$price} грн.</td>
         </tr>
     </table>

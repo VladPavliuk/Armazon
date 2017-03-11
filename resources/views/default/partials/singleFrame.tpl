@@ -26,17 +26,17 @@
                 <div>
                     <h5>
                         {if $size['size'] eq "21x30F"}
-                            21x30ніжка
+                            21x30 (ніжка)
                         {else}
                             {$size['size']}
                         {/if}
                         см. "{$color['ukr_title']}"
                     </h5>
-                    <h5>
+                    <p class="lead">
                         <span class="text-success">
                             {$profile_price} грн.
                         </span>
-                    </h5>
+                    </p>
                     <hr>
                     <input value="{$count}"
                            id='{$profile}-{$size["size"]}-{$color["color"]}'
