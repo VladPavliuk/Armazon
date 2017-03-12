@@ -21,6 +21,13 @@
 
         <div class="row">
             <div class="page-header">
+                <h2>Конструкція фоторамки</h2>
+            </div>
+            <img src="/src/images/frame_construction.jpg" title="Конструкція фоторамки" alt="Конструкція фоторамки">
+        </div>
+
+        <div class="row">
+            <div class="page-header">
                 <h2>Про нас</h2>
             </div>
             <p class="lead">
