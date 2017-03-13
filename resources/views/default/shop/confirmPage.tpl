@@ -51,7 +51,7 @@
                             <span style="color: #ec6d23">&#9913;</span>
                         </label>
                         <select name="transporter" class="form-control" required>
-                            <option value="Міст Експер">Міст Експрес</option>
+                            <option value="Міст Експрес">Міст Експрес</option>
                             <option value="Нова пошта">Нова пошта</option>
                             <option value="Інтайм">Інтайм</option>
                             <option value="Самовивіз">Самовивіз</option>
